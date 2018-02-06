@@ -1,0 +1,14 @@
+
+RewriteEngine on
+DirectoryIndex index.php
+RewriteRule ^([A-Za-z0-9_-]+)?$ /index.php?code=$1
+RewriteRule ^tag/(.*?)?$ /tags.php?t=$1
+
+RewriteRule ^notes/edit/([0-9]+)/([A-Za-z0-9_-]+)?$ /note.php?do=edit&id=$1&code=$2
+
+RewriteRule ^notes/pdf/(.*?)?$ /note.php?do=pdf&code=$1
+RewriteRule ^notes/(.*?)?$ /note.php?do=$1
+RewriteRule ^user/([a-z]+)/([a-z]+)?$ /users.php?do=$1&act=$2
+
+RewriteRule ^user/([a-z]+)/([a-z]+)/(.*?)?$ /users.php?do=$1&act=$2&page=$3
+RewriteRule ^user/([a-z]+)?$ /users.php?do=$1

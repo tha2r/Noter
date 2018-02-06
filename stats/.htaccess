@@ -1,0 +1,7 @@
+AuthName "noter.ml statistics"
+AuthType Basic
+AuthUserFile /home/noter/.stats-htpasswd
+require valid-user
+<Files .stats-htpasswd>
+deny from all
+</Files>
